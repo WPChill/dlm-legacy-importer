@@ -1,12 +1,12 @@
 === Download Monitor Legacy Importer ===
 Contributors: mikejolley
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=10691945
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=mike.jolley@me.com&item_name=Donation+for+Download+Monitor
 Tags: download, downloads, monitor, hits, download monitor, tracking, admin, count, counter, files, versions, download count, logging
 Requires at least: 3.5
 Tested up to: 3.5
 Stable tag: 1.0.0
 
-Converts downloads from the leagacy 3.0.x versions to the new Download Monitor format (which uses post types). Go to Tools > Import to get importing.
+Converts downloads from the leagacy 3.0.x versions to the new Download Monitor format (which uses post types).
 
 == Description ==
 
@@ -21,5 +21,4 @@ Backups: Please backup your database first. We are not responsible for any harm 
 == Changelog ==
 
 = 1.0.0 =
-
 * First release.

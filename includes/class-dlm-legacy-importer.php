@@ -178,7 +178,7 @@ class DLM_Legacy_Importer extends WP_Importer {
 
 			if ( $download_id ) {
 				// Meta
-				update_post_meta( $download_id, 'legacy_download_id', $legacy_download->id );
+				update_post_meta( $download_id, '_legacy_download_id', $legacy_download->id );
 				update_post_meta( $download_id, '_featured', 'no' );
 				update_post_meta( $download_id, '_members_only', $legacy_download->members ? 'yes' : 'no' );
 				update_post_meta( $download_id, '_download_count', absint( $legacy_download->hits ) );

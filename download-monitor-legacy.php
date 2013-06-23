@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Download Monitor Legacy Importer
-Plugin URI: http://wordpress.org/extend/plugins/download-monitor/
-Description: Converts downloads from the leagacy 3.0.x versions to the new Download Monitor format (which uses post types). Go to Tools > Import to get importing.
-Version: 1.0.0 beta 1
+Plugin URI: http://mikejolley.com/projects/download-monitor/add-ons/legacy-importer/
+Description: Converts downloads from the legacy 3.0.x versions to the new Download Monitor format (which uses post types). Go to Tools > Import to get importing.
+Version: 1.0.0
 Author: Mike Jolley
 Author URI: http://mikejolley.com
 Requires at least: 3.5
@@ -28,7 +28,7 @@ function wp_dlm_legacy_ids( $id ) {
 		$legacy_download = $wpdb->get_var( $wpdb->prepare( "
 			SELECT post_id FROM {$wpdb->postmeta}
 			LEFT JOIN {$wpdb->posts} ON {$wpdb->postmeta}.post_id = {$wpdb->posts}.ID
-			WHERE meta_key = 'legacy_download_id'
+			WHERE meta_key = '_legacy_download_id'
 			AND meta_value = %d
 			AND post_type = 'dlm_download'
 			AND post_status = 'publish'
