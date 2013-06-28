@@ -80,6 +80,13 @@ class DLM_Legacy_Importer extends WP_Importer {
 
 		echo '<div class="narrow">';
 
+		if ( ! class_exists( 'WP_DLM' ) ) {
+			echo '<p>' . __( 'Please de-activate the old Download Monitor plugin and activate the new Download Monitor plugin before continuing with the import. This will ensure the required post types and taxonomies exist prior to the migration.' ) . '</p>';
+			echo '<p><a class="button" href="' . admin_url( 'plugins.php' ) . '">' . __( 'Manage Plugins &rarr;' ) . '</a></p>';
+			echo '</div>';
+			return;
+		}
+
 		echo '<p>' . __( 'Analyzing Downloads&hellip;' ) . '</p>';
 
 		echo '<ol>';

@@ -3,7 +3,7 @@
 Plugin Name: Download Monitor Legacy Importer
 Plugin URI: http://mikejolley.com/projects/download-monitor/add-ons/legacy-importer/
 Description: Converts downloads from the legacy 3.0.x versions to the new Download Monitor format (which uses post types). Go to Tools > Import to get importing.
-Version: 1.0.0
+Version: 1.0.1
 Author: Mike Jolley
 Author URI: http://mikejolley.com
 Requires at least: 3.5
@@ -65,7 +65,7 @@ class WP_DLM_Legacy {
 	 * @return void
 	 */
 	public function register_importer() {
-		register_importer( 'dlm_legacy', 'Download Monitor Legacy Importer', __( 'Convert downloads from the leagacy DLM plugin to the new version (which uses post tyes).' ), array( $this, 'do_import' ) );
+		register_importer( 'dlm_legacy', 'Download Monitor Legacy Importer', __( 'Convert downloads from the leagacy DLM plugin to the new version (which uses post types).' ), array( $this, 'do_import' ) );
 	}
 
 	/**
