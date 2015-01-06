@@ -14,8 +14,9 @@ Tested up to: 3.5
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
-if ( ! defined( 'ABSPATH' ) )
+if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
+}
 
 add_filter( 'dlm_shortcode_download_id', 'wp_dlm_legacy_ids' );
 
@@ -56,6 +57,7 @@ class WP_DLM_Legacy {
 	 */
 	public function __construct() {
 		add_action( 'admin_init', array( $this, 'register_importer' ) );
+		add_filter( 'dlm_extension', array( $this, 'add_extension' ) );
 	}
 
 	/**
@@ -76,6 +78,10 @@ class WP_DLM_Legacy {
 
 		$importer = new DLM_Legacy_Importer();
 		$importer->dispatch();
+	}
+
+	public function add_extension( $extensions ) {
+		$extensions[] = 'dlm-legacy-importer';
 	}
 }
 
