@@ -1,10 +1,10 @@
 === Download Monitor Legacy Importer ===
-Contributors: mikejolley
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=mike.jolley@me.com&item_name=Donation+for+Download+Monitor
+Contributors: barrykooij, mikejolley
+Donate link:
 Tags: download, downloads, monitor, hits, download monitor, tracking, admin, count, counter, files, versions, download count, logging
 Requires at least: 3.5
 Tested up to: 3.5
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 
 Converts downloads from the leagacy 3.0.x versions to the new Download Monitor format (which uses post types).
 
@@ -19,6 +19,9 @@ Note on data: After import, the old tables will not be deleted. When you are hap
 Backups: Please backup your database first. We are not responsible for any harm or wrong doing this plugin may cause. Users are fully responsible for their own use and data. This plugin is to be used WITHOUT warranty.
 
 == Changelog ==
+
+= 1.0.2 =
+* Added extension filter.
 
 = 1.0.1 =
 * Check the new DLM is activated prior to import.

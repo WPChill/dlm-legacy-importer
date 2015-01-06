@@ -3,7 +3,7 @@
 Plugin Name: Download Monitor Legacy Importer
 Plugin URI: http://mikejolley.com/projects/download-monitor/add-ons/legacy-importer/
 Description: Converts downloads from the legacy 3.0.x versions to the new Download Monitor format (which uses post types). Go to Tools > Import to get importing.
-Version: 1.0.1
+Version: 1.0.2
 Author: Mike Jolley
 Author URI: http://mikejolley.com
 Requires at least: 3.5
@@ -42,6 +42,20 @@ function wp_dlm_legacy_ids( $id ) {
 	return $id;
 }
 
+/**
+ * Add extensions
+ *
+ * @param $extensions
+ *
+ * @return array
+ */
+function dlm_legacy_importer_add_extension( $extensions ) {
+	$extensions[] = 'dlm-legacy-importer';
+	return $extensions;
+}
+
+add_filter( 'dlm_extensions', 'dlm_legacy_importer_add_extension' );
+
 if ( ! defined( 'WP_LOAD_IMPORTERS' ) )
 	return;
 /**
@@ -51,13 +65,9 @@ class WP_DLM_Legacy {
 
 	/**
 	 * __construct function.
-	 *
-	 * @access public
-	 * @return void
 	 */
 	public function __construct() {
 		add_action( 'admin_init', array( $this, 'register_importer' ) );
-		add_filter( 'dlm_extension', array( $this, 'add_extension' ) );
 	}
 
 	/**
@@ -67,7 +77,7 @@ class WP_DLM_Legacy {
 	 * @return void
 	 */
 	public function register_importer() {
-		register_importer( 'dlm_legacy', 'Download Monitor Legacy Importer', __( 'Convert downloads from the leagacy DLM plugin to the new version (which uses post types).' ), array( $this, 'do_import' ) );
+		register_importer( 'dlm_legacy', 'Download Monitor Legacy Importer', __( 'Convert downloads from the legacy DLM plugin to the new version (which uses post types).' ), array( $this, 'do_import' ) );
 	}
 
 	/**
@@ -78,10 +88,6 @@ class WP_DLM_Legacy {
 
 		$importer = new DLM_Legacy_Importer();
 		$importer->dispatch();
-	}
-
-	public function add_extension( $extensions ) {
-		$extensions[] = 'dlm-legacy-importer';
 	}
 }
 
