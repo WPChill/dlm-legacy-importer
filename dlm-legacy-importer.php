@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Download Monitor Legacy Importer
-Plugin URI: http://mikejolley.com/projects/download-monitor/add-ons/legacy-importer/
+Plugin URI: https://www.download-monitor.com/extensions/dlm-legacy-importer/
 Description: Converts downloads from the legacy 3.0.x versions to the new Download Monitor format (which uses post types). Go to Tools > Import to get importing.
 Version: 1.0.2
-Author: Mike Jolley
-Author URI: http://mikejolley.com
+Author: Download Monitor
+Author URI: https://www.download-monitor.com
 Requires at least: 3.5
 Tested up to: 3.5
 
