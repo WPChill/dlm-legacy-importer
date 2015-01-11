@@ -17,14 +17,3 @@ Note on shortcodes: Download shortcodes containing IDs will mismatch the new Dow
 Note on data: After import, the old tables will not be deleted. When you are happy that the import has been completed successfully, delete the old DLM tables manually.
 
 Backups: Please backup your database first. We are not responsible for any harm or wrong doing this plugin may cause. Users are fully responsible for their own use and data. This plugin is to be used WITHOUT warranty.
-
-== Changelog ==
-
-= 1.0.2 =
-* Added extension filter.
-
-= 1.0.1 =
-* Check the new DLM is activated prior to import.
-
-= 1.0.0 =
-* First release.
