@@ -151,7 +151,7 @@ class DLM_Legacy_Importer extends WP_Importer {
 			$already_imported = $wpdb->get_var( "
 				SELECT ID FROM {$wpdb->posts}
 				LEFT JOIN {$wpdb->postmeta} ON {$wpdb->posts}.ID = {$wpdb->postmeta}.post_id
-				WHERE meta_key = 'legacy_id'
+				WHERE meta_key = '_legacy_download_id'
 				AND post_status = 'publish'
 				AND post_type = 'dlm_download'
 				AND meta_value = '" . absint( $legacy_download->id ) . "'
